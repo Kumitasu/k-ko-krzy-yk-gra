@@ -1,1 +1,13 @@
-/.idea
+### Linux ###
+*~
+
+### Code ###
+.settings/
+.vscode/
+
+### Webstorm ###
+.idea/
+
+### Other ###
+.test/
+.solution
