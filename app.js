@@ -1,18 +1,18 @@
-// HTML Elements
+
 const statusDiv = document.querySelector('.status');
 const resetDiv = document.querySelector('.reset');
 const cellDivs = document.querySelectorAll('.game-cell');
 
-// game constants
+
 const xSymbol = '×';
 const oSymbol = '○';
 
-// game variables
+
 let gameIsLive = true;
 let xIsNext = true;
 
 
-// functions
+
 const letterToSymbol = (letter) => letter === 'x' ? xSymbol : oSymbol;
 
 const handleWin = (letter) => {
@@ -35,7 +35,7 @@ const checkGameStatus = () => {
   const bottomMiddle = cellDivs[7].classList[1];
   const bottomRight = cellDivs[8].classList[1];
 
-  // check winner
+
   if (topLeft && topLeft === topMiddle && topLeft === topRight) {
     handleWin(topLeft);
     cellDivs[0].classList.add('wygrywa');
@@ -90,7 +90,7 @@ const checkGameStatus = () => {
 };
 
 
-// event Handlers
+
 const handleReset = () => {
   xIsNext = true;
   statusDiv.innerHTML = `${xSymbol} następny`;
@@ -119,7 +119,7 @@ const handleCellClick = (e) => {
 };
 
 
-// event listeners
+
 resetDiv.addEventListener('click', handleReset);
 
 for (const cellDiv of cellDivs) {
